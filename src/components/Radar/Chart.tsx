@@ -96,7 +96,13 @@ const _Chart: FC<ChartProps> = ({
         data-tooltip-color={quadrant.color}
         tabIndex={-1}
       >
-        <Blip flag={item.flag} color={quadrant.color} x={x} y={y} />
+        <Blip
+          icon={item.icon}
+          flag={item.flag}
+          color={quadrant.color}
+          x={x}
+          y={y}
+        />
       </Link>
     );
   };

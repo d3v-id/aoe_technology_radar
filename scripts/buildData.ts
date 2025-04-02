@@ -96,11 +96,13 @@ async function parseDirectory(dirPath: string): Promise<Item[]> {
             tags: data.tags || [],
             revisions: [],
             position: [0, 0],
+            icon: data.icon || undefined,
           };
         } else {
           items[id].release = releaseDate;
           items[id].body = body || items[id].body;
           items[id].title = data.title || items[id].title;
+          items[id].icon = data.icon || items[id].icon;
           items[id].ring = data.ring || items[id].ring;
           items[id].quadrant = data.quadrant || items[id].quadrant;
           items[id].tags = data.tags || items[id].tags;

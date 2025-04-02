@@ -1,8 +1,8 @@
 {
   "name": "aoe_technology_radar",
-  "version": "4.6.1",
+  "version": "4.7.0-rc.1",
   "bin": {
-    "techradar": "./bin/techradar.js"
+    "techradar": "bin/techradar.js"
   },
   "scripts": {
     "dev": "next dev",
@@ -43,5 +43,8 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.1.0"
   }
 }

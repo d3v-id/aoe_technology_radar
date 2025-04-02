@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { getChartConfig } from "@/lib/data";
 import { Flag } from "@/lib/types";
@@ -7,20 +7,83 @@ const { blipSize } = getChartConfig();
 const halfBlipSize = blipSize / 2;
 
 interface BlipProps {
+  icon: string | undefined;
   color: string;
   x: number;
   y: number;
 }
 
-export function Blip({ flag, color, x, y }: BlipProps & { flag: Flag }) {
+export function Blip({ icon, flag, color, x, y }: BlipProps & { flag: Flag }) {
+  if (icon != undefined) {
+    return <BlipIcon icon={icon} x={x} y={y} color={color} />;
+  }
+
+  console.log("1");
+  console.log(icon);
+
   switch (flag) {
     case Flag.New:
-      return <BlipNew x={x} y={y} color={color} />;
+      return <BlipNew icon={icon} x={x} y={y} color={color} />;
     case Flag.Changed:
-      return <BlipChanged x={x} y={y} color={color} />;
+      return <BlipChanged icon={icon} x={x} y={y} color={color} />;
     default:
-      return <BlipDefault x={x} y={y} color={color} />;
+      return <BlipDefault icon={icon} x={x} y={y} color={color} />;
   }
+}
+
+/*function BlipIcon({ icon, x, y, color }: BlipProps) {
+  x = Math.round(x - halfBlipSize);
+  y = Math.round(y - halfBlipSize);
+
+  // Dynamically load the SVG based on the flag
+ /* const iconSrc = `../../../blipIcons/${icon}.svg`;
+
+  console.log(iconSrc);
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <image href={iconSrc} width="24" height="24" />
+    </g>
+  );*
+  return (
+    <path
+      stroke="none"
+      fill={color}
+      d="M24.16,11 L37.194,15.648 L35.206,32.882 L24.16,39 L13.114,32.882 L11.126,15.648 L24.16,11 Z M24.16,14.094 L16.012,32.364 L19.05,32.364 L20.688,28.276 L27.604,28.276 L29.242,32.364 L32.28,32.364 L24.16,14.094 Z M24.16,20.03 L26.54,25.756 L21.78,25.756 L24.16,20.03 Z"
+      transform={`translate(${x},${y})`}
+    />
+  );
+*
+
+  let iconSrc;
+  try {
+    iconSrc = require(`../../../blipIcons/${icon}.svg`);
+  } catch (error) {
+    console.error("Icon not found:", icon);
+    return null;
+  }
+
+  x = Math.round(x - halfBlipSize);
+  y = Math.round(y - halfBlipSize);
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <image href={iconSrc} width="24" height="24" />
+    </g>
+  );
+}*/
+
+function BlipIcon({ icon, x, y, color }: BlipProps) {
+  const iconSrc = `/blipIcons/${icon}.svg`;
+
+  x = Math.round(x - halfBlipSize);
+  y = Math.round(y - halfBlipSize);
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <image href={iconSrc} width="24" height="24" />
+    </g>
+  );
 }
 
 function BlipNew({ x, y, color }: BlipProps) {
@@ -55,4 +118,7 @@ function BlipChanged({ x, y, color }: BlipProps) {
 
 function BlipDefault({ x, y, color }: BlipProps) {
   return <circle cx={x} cy={y} r={halfBlipSize} stroke="none" fill={color} />;
+}
+function useState<T>(arg0: null): [any, any] {
+  throw new Error("Function not implemented.");
 }

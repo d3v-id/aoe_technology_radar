@@ -43,7 +43,7 @@
 
   &:hover,
   &.isActive {
-    background: var(--foreground);
+    background: var(--hover);
     color: var(--background);
     opacity: 1;
   }

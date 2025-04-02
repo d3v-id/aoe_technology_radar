@@ -81,7 +81,7 @@ function BlipIcon({ icon, x, y, color }: BlipProps) {
 
   return (
     <g transform={`translate(${x},${y})`}>
-      <image href={iconSrc} width="24" height="24" />
+      <image href={iconSrc} width="50" height="50" />
     </g>
   );
 }

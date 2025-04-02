@@ -1,3 +1,118 @@
 {
-  "basePath": "/"
+  "basePath": "/",
+  "baseUrl": "",
+  "editUrl": "https://github.dev/AOEpeople/techradar/blob/main/radar/{release}/{id}.md",
+  "logoFile": "logo.svg",
+  "jsFile": "",
+  "toggles": {
+    "showSearch": false,
+    "showChart": true,
+    "showTagFilter": true,
+    "showQuadrantList": true,
+    "showEmptyRings": false
+  },
+  "sections": ["radar", "tags", "list"],
+  "colors": {
+    "foreground": "#000",
+    "background": "#ececec",
+    "highlight": "#0087ff",
+    "content": "#e6e6e6",
+    "text": "#000",
+    "link": "#2592bc",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "tag": "rgba(255, 255, 255, 0.1)"
+  },
+  "quadrants": [
+    {
+      "id": "languages-and-frameworks",
+      "title": "Programmiersprachen & Frameworks",
+      "description": "Eine Auswahl an Programmiersprachen sowie essenzielle Frameworks für die Entwicklung verschiedenster Softwarelösungen.",
+      "color": "#A3B1FF"
+    },
+    {
+      "id": "methods-and-patterns",
+      "title": "Methoden & Muster",
+      "description": "Wichtige Methoden der Softwareentwicklung und Entwurfsmuster, die alles von kontinuierlicher Integration und Tests bis hin zur Architektur abdecken.",
+      "color": "#5881FF"
+    },
+    {
+      "id": "platforms-and-operations",
+      "title": "Plattformen & Betrieb",
+      "description": "Technologien und Werkzeuge für den Betrieb von Software und Infrastruktur, einschließlich Plattformen und Dienste zur Verwaltung und Skalierung von Anwendungen.",
+      "color": "#3F63FF"
+    },
+    {
+      "id": "tools",
+      "title": "Werkzeuge",
+      "description": "Eine Auswahl an Software-Werkzeugen, von einfachen Produktivitätshelfern bis hin zu umfassenden Projektlösungen für verschiedene Anforderungen.",
+      "color": "#4071FF"
+    }
+  ],
+  "rings": [
+    {
+      "id": "adopt",
+      "title": "Adopt",
+      "description": "",
+      "color": "#588157",
+      "radius": 0.5,
+      "strokeWidth": 5
+    },
+    {
+      "id": "trial",
+      "title": "Trial",
+      "description": "",
+      "color": "#457b9d",
+      "radius": 0.69,
+      "strokeWidth": 3
+    },
+    {
+      "id": "assess",
+      "title": "Assess",
+      "description": "",
+      "color": "#bc6c25",
+      "radius": 0.85,
+      "strokeWidth": 2
+    },
+    {
+      "id": "hold",
+      "title": "Hold",
+      "description": "",
+      "color": "#d62828",
+      "radius": 1,
+      "strokeWidth": 0.75
+    }
+  ],
+  "flags": {
+    "new": {
+      "color": "#f1235a",
+      "title": "Neu",
+      "titleShort": "N",
+      "description": "Neu in dieser Version"
+    },
+    "changed": {
+      "color": "#40a7d1",
+      "title": "Geändert",
+      "titleShort": "G",
+      "description": "Kürzlich geändert"
+    },
+    "default": {
+      "description": "Unverändert"
+    }
+  },
+  "labels": {
+    "title": "Technologie-Radar",
+    "imprint": "Rechtliche Informationen",
+    "quadrant": "Quadrant",
+    "quadrantOverview": "Quadranten-Übersicht",
+    "zoomIn": "Hineinzoomen",
+    "filterByTag": "Nach Tag filtern",
+    "footer": "Der Technologie-Radar ist ein Projekt der AOE GmbH. Sie können Ihren eigenen Radar basierend auf dem Open-Source-Projekt erstellen.",
+    "notUpdated": "Dieses Element wurde in den letzten drei Versionen des Radars nicht aktualisiert. Sollte es in einer der neueren Ausgaben enthalten sein, bleibt es wahrscheinlich relevant. Falls das Element jedoch älter ist, könnte seine Relevanz abgenommen haben, und unsere aktuelle Bewertung könnte davon abweichen. Leider sind unsere Kapazitäten zur regelmäßigen Überprüfung früherer Radar-Elemente begrenzt.",
+    "notFound": "404 - Seite nicht gefunden",
+    "pageAbout": "Wie nutzt man den AOE Technologie-Radar?",
+    "pageOverview": "Technologie-Übersicht",
+    "pageSearch": "Suche",
+    "searchPlaceholder": "Wonach suchen Sie?",
+    "metaDescription": ""
+  }
 }

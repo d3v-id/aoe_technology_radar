@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { FC, Fragment, memo } from "react";
+import React, { FC, Fragment, memo, useState } from "react";
 
 import styles from "./Chart.module.css";
 
@@ -54,20 +54,23 @@ const _Chart: FC<ChartProps> = ({
     ].join(" ");
   };
 
-  const renderGlow = (position: number, color: string) => {
+  const renderGlow = (position: number, baseColor: string) => {
+    const [hovered, setHovered] = useState(false);
     const gradientId = `glow-${position}`;
 
     const cx = position === 1 || position === 3 ? 1 : 0;
     const cy = position === 1 || position === 2 ? 1 : 0;
-
     const x = position === 1 || position === 3 ? 0 : center;
     const y = position === 1 || position === 2 ? 0 : center;
+
+    const hoverColor = hovered ? "#99c5ff" : baseColor; // Farbe bei Hover ändern
+
     return (
       <>
         <defs>
           <radialGradient id={gradientId} x={0} y={0} r={1} cx={cx} cy={cy}>
-            <stop offset="0%" stopColor={color} stopOpacity={0.5}></stop>
-            <stop offset="100%" stopColor={color} stopOpacity={0}></stop>
+            <stop offset="0%" stopColor={hoverColor} stopOpacity={0.5}></stop>
+            <stop offset="100%" stopColor={hoverColor} stopOpacity={0}></stop>
           </radialGradient>
         </defs>
         <rect
@@ -76,6 +79,8 @@ const _Chart: FC<ChartProps> = ({
           x={x}
           y={y}
           fill={`url(#${gradientId})`}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
         />
       </>
     );

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <path id="azurecosmosdb-a" d="M15.6762,38.02 L41.6,38.02 L27.635,13.8182 L23.3818,25.504 L31.5522,35.2172 L15.6762,38.02 Z M26.522,11.98 L16.547,20.3478 L8,35.1542 L15.707,35.1542 L15.707,35.1738 L26.522,11.98 Z"/>
+  </defs>
+  <use xlink:href="#azurecosmosdb-a"/>
+</svg>

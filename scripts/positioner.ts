@@ -8,9 +8,9 @@ const startAngles = [270, 0, 180, 90];
 
 export default class Positioner {
   private readonly centerRadius: number;
-  private readonly minDistance: number = 20;
-  private readonly paddingRing: number = 15;
-  private readonly paddingAngle: number = 10;
+  private readonly minDistance: number = 10;
+  private readonly paddingRing: number = 40;
+  private readonly paddingAngle: number = 20;
   private positions: Record<string, Position[]> = {};
   private ringDimensions: Record<string, RingDimension> = {};
   private quadrantAngles: Record<string, number> = {};
@@ -51,11 +51,19 @@ export default class Positioner {
   ): Position {
     const [innerRadius, outerRadius] = this.ringDimensions[ringId];
     const ringWidth = outerRadius - innerRadius;
-    const absoluteRadius = innerRadius + radiusFraction * ringWidth;
+    //const absoluteRadius = innerRadius + radiusFraction * ringWidth;
+    const absoluteRadius =
+      (innerRadius + outerRadius) / 2 + this.paddingRing / 2;
 
     const startAngle = this.quadrantAngles[quadrantId] + this.paddingAngle;
     const endAngle = startAngle + 90 - 2 * this.paddingAngle;
-    const absoluteAngle = startAngle + (endAngle - startAngle) * angleFraction;
+
+    const adjustedAngleFraction = 0.25 + 0.5 * angleFraction;
+    const absoluteAngle =
+      startAngle + (endAngle - startAngle) * adjustedAngleFraction;
+
+    //const absoluteAngle = startAngle + (endAngle - startAngle) * angleFraction;
+
     const angleInRadians = ((absoluteAngle - 90) * Math.PI) / 180;
 
     return [

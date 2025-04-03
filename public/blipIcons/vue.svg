@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <path id="vue-a" d="M41.6,10.854 L27.684,10.854 L24.8,15.824 L21.916,10.854 L8,10.854 L24.8,39.946 L41.6,10.854 Z M24.8,28.312 L15.224,11.722 L21.426,11.722 L24.8,17.574 L28.174,11.722 L34.376,11.722 L24.8,28.312 Z"/>
+  </defs>
+  <use xlink:href="#vue-a"/>
+</svg>

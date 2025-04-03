@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   version="1.1"
+   style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+   viewBox="0 0 9144 9144"
+   id="svg1"
+   sodipodi:docname="html.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.089785652"
+     inkscape:cx="4566.4312"
+     inkscape:cy="4572"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Camada_x0020_1" />
+  <defs
+     id="defs1">
+    <style
+       type="text/css"
+       id="style1">  .fil0 {fill:#F0F0F0} .fil1 {fill:#011627;fill-rule:nonzero}  </style>
+  </defs>
+  <g
+     id="Camada_x0020_1"
+     inkscape:label="Camada 1">
+    <metadata
+       id="CorelCorpID_0Corel-Layer" />
+    <path
+       class="fil1"
+       d="M2815 2455l3514 0c40,0 73,33 73,74 0,3 0,6 -1,9l-286 3581c-3,32 -24,57 -53,65l-1467 501c-15,5 -32,5 -46,0 -491,-164 -981,-335 -1470,-502 -29,-10 -48,-35 -50,-64l-287 -3585c-3,-40 27,-75 68,-78l5 -1zm3434 147l-3355 0 277 3458 1401 478 1401 -478 276 -3458zm-1199 2690l-443 182c-17,6 -34,7 -50,2l0 0 -457 -144c-31,-10 -52,-39 -52,-70l0 0 0 -148 -283 0 0 410 830 262 770 -316 106 -1210 -1456 0c-40,0 -73,-32 -73,-73l0 -1 -26 -500c-2,-41 29,-75 69,-77l4 0 0 0 1555 0 0 -284 -1932 0 65 1219 1404 0c41,0 74,33 74,73 0,3 -1,6 -1,8l-53 603c-2,31 -23,55 -51,64zm-474 37l383 -158 42 -480 -1394 0 0 -1c-38,0 -71,-30 -73,-69l-71 -1360c-1,-3 -1,-6 -1,-9 0,-41 33,-73 73,-73l2082 0c40,0 73,32 73,73l0 430c0,40 -33,73 -73,73l-1551 0 19 359 1466 0c2,0 4,0 6,0 41,4 70,39 67,79l-117 1334 0 0c-3,26 -19,50 -45,61l-832 341c-16,8 -35,10 -53,4l-903 -284c-32,-8 -56,-37 -56,-71l0 -537c0,-41 33,-73 73,-73l431 0c40,0 73,32 73,73l0 168 381 120z"
+       id="path1" />
+  </g>
+</svg>

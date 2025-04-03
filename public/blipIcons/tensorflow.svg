@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <path id="tensorflow-a" d="M35.18,24.6 L35.31,30.71 L31.28,28.37 L31.28,37.08 L25.95,40.2 L25.95,9 L39.21,16.67 L39.21,23.56 L31.28,18.88 L31.28,22.39 L35.18,24.6 Z M11.39,16.67 L24.65,9 L24.65,40.2 L19.32,37.08 L19.32,18.88 L11.39,23.56 L11.39,16.67 Z"/>
+  </defs>
+  <use xlink:href="#tensorflow-a"/>
+</svg>

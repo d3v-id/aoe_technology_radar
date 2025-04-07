@@ -1,7 +1,7 @@
 ---
 title: "Docker"
 ring: hold
-quadrant: tools
+quadrant: platforms-and-operations
 tags: [coding, frontend]
 icon: docker
 related:

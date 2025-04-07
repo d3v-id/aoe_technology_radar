@@ -1,9 +1,9 @@
 ---
 title: ".NET Core"
 ring: hold
-quadrant: tools
+quadrant: languages-and-frameworks
 tags: [coding, frontend]
-icon: netcore
+icon: DotNETCore
 related:
 ---
 

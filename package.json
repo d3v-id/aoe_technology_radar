@@ -8,6 +8,7 @@
     "dev": "next dev",
     "build:icons": "npx @svgr/cli --typescript --no-dimensions --no-prettier --out-dir src/components/Icons -- src/icons",
     "build:data": "tsx scripts/buildData.ts",
+    "debug:build:data": "node --inspect-brk ./node_modules/.bin/tsx scripts/buildData.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

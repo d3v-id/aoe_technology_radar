@@ -1,8 +1,9 @@
 ---
 title: "C#"
 ring: hold
-quadrant: tools
-tags: [coding, frontend]
+quadrant: languages-and-frameworks
+tags: [coding, backend]
+icon: cSharp
 ---
 
 C# ...

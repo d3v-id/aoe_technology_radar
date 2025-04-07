@@ -21,6 +21,7 @@ const _Chart: FC<ChartProps> = ({
   items = [],
   className,
 }) => {
+  const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
   const viewBoxSize = size;
   const center = size / 2;
   const startAngles = [270, 0, 180, 90]; // Corresponding to positions 1, 2, 3, and 4 respectively
@@ -100,6 +101,8 @@ const _Chart: FC<ChartProps> = ({
         data-tooltip={item.title}
         data-tooltip-color={quadrant.color}
         tabIndex={-1}
+        onMouseEnter={() => setHoveredItemId(item.id)}
+        onMouseLeave={() => setHoveredItemId(null)}
       >
         <Blip
           icon={item.icon}
@@ -143,6 +146,31 @@ const _Chart: FC<ChartProps> = ({
     });
   };
 
+  const renderHoverLines = () => {
+    const hoveredItem = items.find((i) => i.id === hoveredItemId);
+    if (!hoveredItem) return null;
+
+    const [x1, y1] = hoveredItem.position;
+
+    return items
+      .filter((i) => i.id !== hoveredItemId)
+      .map((otherItem) => {
+        const [x2, y2] = otherItem.position;
+        return (
+          <line
+            key={`line-${hoveredItemId}-${otherItem.id}`}
+            x1={x1}
+            y1={y1}
+            x2={x2}
+            y2={y2}
+            stroke="rgba(0,0,0,0.2)"
+            strokeWidth={1}
+            className={styles.line}
+          />
+        );
+      });
+  };
+
   return (
     <svg
       className={className}
@@ -167,6 +195,7 @@ const _Chart: FC<ChartProps> = ({
       ))}
       <g className={styles.items}>{items.map((item) => renderItem(item))}</g>
       <g className={styles.ringLabels}>{renderRingLabels()}</g>
+      {renderHoverLines()}
     </svg>
   );
 };

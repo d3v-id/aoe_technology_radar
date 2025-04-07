@@ -55,7 +55,7 @@
       "description": "",
       "color": "#588157",
       "radius": 0.5,
-      "strokeWidth": 5
+      "strokeWidth": 4
     },
     {
       "id": "trial",
@@ -101,7 +101,7 @@
   },
   "chart": {
     "size": 800,
-    "blipSize": 12
+    "blipSize": 36
   },
   "social": [
     {

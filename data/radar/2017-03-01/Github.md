@@ -1,6 +1,6 @@
 ---
 title: "Github"
-ring: hold
+ring: adopt
 quadrant: tools
 tags: [coding, frontend]
 icon: github

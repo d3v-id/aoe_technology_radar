@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useState as reactUseState } from "react";
 
 import { getChartConfig } from "@/lib/data";
 import { Flag } from "@/lib/types";
@@ -74,14 +75,34 @@ export function Blip({ icon, flag, color, x, y }: BlipProps & { flag: Flag }) {
 }*/
 
 function BlipIcon({ icon, x, y, color }: BlipProps) {
-  const iconSrc = `/blipIcons/${icon}.svg`;
+  const [imageError, setImageError] = reactUseState(false);
+  const iconSrc = `/blipIconsColor/${icon}.svg`;
 
   x = Math.round(x - halfBlipSize);
   y = Math.round(y - halfBlipSize);
 
   return (
     <g transform={`translate(${x},${y})`}>
-      <image href={iconSrc} width="50" height="50" />
+      {!imageError ? (
+        <image
+          href={iconSrc}
+          width={blipSize}
+          height={blipSize}
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <text
+          x="25"
+          y="30"
+          textAnchor="middle"
+          fill={"black"}
+          fontSize="14"
+          fontWeight="bold"
+          fontFamily="Arial"
+        >
+          {icon}
+        </text>
+      )}
     </g>
   );
 }

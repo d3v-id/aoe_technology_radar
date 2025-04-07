@@ -3,7 +3,7 @@ title: "Eclipse"
 ring: hold
 quadrant: tools
 tags: [coding, frontend]
-icon: eclipse
+icon: Eclipse-IDE
 related: java
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: "Entity Framework"
 ring: hold
-quadrant: tools
+quadrant: languages-and-frameworks
 tags: [coding, frontend]
-icon: entityFramework
+icon: Entity Framework
 related:
 ---
 

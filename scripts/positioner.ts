@@ -1,3 +1,4 @@
+import { getChartConfig } from "@/lib/data";
 import { Quadrant, Ring } from "@/lib/types";
 
 type Position = [x: number, y: number];
@@ -6,11 +7,14 @@ type RingDimension = [innerRadius: number, outerRadius: number];
 // Corresponding to positions 1, 2, 3, and 4 respectively
 const startAngles = [270, 0, 180, 90];
 
+const { blipSize } = getChartConfig();
+const halfBlipSize = blipSize / 2;
+
 export default class Positioner {
   private readonly centerRadius: number;
-  private readonly minDistance: number = 10;
-  private readonly paddingRing: number = 40;
-  private readonly paddingAngle: number = 20;
+  private readonly minDistance: number = 25;
+  private readonly paddingRing: number = 10;
+  private readonly paddingAngle: number = 5;
   private positions: Record<string, Position[]> = {};
   private ringDimensions: Record<string, RingDimension> = {};
   private quadrantAngles: Record<string, number> = {};
@@ -50,21 +54,29 @@ export default class Positioner {
     angleFraction: number,
   ): Position {
     const [innerRadius, outerRadius] = this.ringDimensions[ringId];
-    const ringWidth = outerRadius - innerRadius;
-    //const absoluteRadius = innerRadius + radiusFraction * ringWidth;
+    const ringWidth = (outerRadius - innerRadius) * 0.1;
     const absoluteRadius =
-      (innerRadius + outerRadius) / 2 + this.paddingRing / 2;
+      innerRadius +
+      ringWidth / 2 +
+      halfBlipSize +
+      radiusFraction * ringWidth * 1; // 0.01  Center in the middle of the two rings
+    //const absoluteRadius = (innerRadius + outerRadius) / 2 + this.paddingRing / 2;
 
     const startAngle = this.quadrantAngles[quadrantId] + this.paddingAngle;
     const endAngle = startAngle + 90 - 2 * this.paddingAngle;
 
-    const adjustedAngleFraction = 0.25 + 0.5 * angleFraction;
-    const absoluteAngle =
-      startAngle + (endAngle - startAngle) * adjustedAngleFraction;
+    //const adjustedAngleFraction = 0.25 + 0.5 * angleFraction;
+    //const absoluteAngle =  startAngle + (endAngle - startAngle) * adjustedAngleFraction;
 
-    //const absoluteAngle = startAngle + (endAngle - startAngle) * angleFraction;
+    const absoluteAngle = startAngle + (endAngle - startAngle) * angleFraction;
 
     const angleInRadians = ((absoluteAngle - 90) * Math.PI) / 180;
+    console.log("----------------------");
+    console.log(startAngle);
+    console.log(endAngle);
+    console.log(absoluteAngle);
+    console.log(angleInRadians);
+    console.log("----------------------");
 
     return [
       Math.round(this.centerRadius + absoluteRadius * Math.cos(angleInRadians)),
@@ -85,6 +97,7 @@ export default class Positioner {
         Math.sqrt(Math.random()),
         Math.random(),
       );
+
       tries++;
     } while (
       this.isOverlapping(position, this.positions[quadrantId]) &&
@@ -96,6 +109,8 @@ export default class Positioner {
         `Could not find a non-overlapping position for ${quadrantId} in ring ${ringId}`,
       );
     }
+
+    console.log("Position: ", position[0], position[1]);
 
     this.positions[quadrantId].push(position);
     return position;

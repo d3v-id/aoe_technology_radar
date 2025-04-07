@@ -1,7 +1,7 @@
 ---
 title: "Angular"
 ring: hold
-quadrant: tools
+quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: angular
 related:

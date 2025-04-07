@@ -1,8 +1,8 @@
 ---
 title: "Java"
-ring: hold
+ring: trial
 quadrant: languages-and-frameworks
-tags: [coding, frontend]
+tags: [coding, backend]
 icon: java
 related:
 ---

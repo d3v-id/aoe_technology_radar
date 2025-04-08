@@ -1,10 +1,10 @@
 ---
-title: "HTML"
+title: "jQuery"
 ring: hold
 quadrant: languages-and-frameworks
-tags: [coding, frontend]
-icon: html5
+tags: []
+icon: jquery
 related: [JavaScript]
 ---
 
-HTML ...
+jQuery ...

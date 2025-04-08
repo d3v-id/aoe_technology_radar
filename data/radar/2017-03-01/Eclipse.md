@@ -4,7 +4,7 @@ ring: hold
 quadrant: tools
 tags: [coding, frontend]
 icon: Eclipse-IDE
-related: java
+related: [Java, Rider]
 ---
 
 Eclipse ....

@@ -1,10 +1,10 @@
 ---
-title: "Javascript"
+title: "JavaScript"
 ring: adopt
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: javascript
-related:
+related: [HTML, TypeScript, jQuery]
 ---
 
-Javascript
+JavaScript

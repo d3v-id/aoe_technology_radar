@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { FC, Fragment, memo, useState } from "react";
 
 import styles from "./Chart.module.css";
+import { ConnectingLines } from "./ConnectingLines";
 
 import { Blip } from "@/components/Radar/Blip";
 import { Item, Quadrant, Ring } from "@/lib/types";
@@ -146,30 +147,30 @@ const _Chart: FC<ChartProps> = ({
     });
   };
 
-  const renderHoverLines = () => {
-    const hoveredItem = items.find((i) => i.id === hoveredItemId);
-    if (!hoveredItem) return null;
+  // const renderHoverLines = () => {
+  //   const hoveredItem = items.find((i) => i.id === hoveredItemId);
+  //   if (!hoveredItem) return null;
 
-    const [x1, y1] = hoveredItem.position;
+  //   const [x1, y1] = hoveredItem.position;
 
-    return items
-      .filter((i) => i.id !== hoveredItemId)
-      .map((otherItem) => {
-        const [x2, y2] = otherItem.position;
-        return (
-          <line
-            key={`line-${hoveredItemId}-${otherItem.id}`}
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-            stroke="rgba(0,0,0,0.2)"
-            strokeWidth={1}
-            className={styles.line}
-          />
-        );
-      });
-  };
+  //   return items
+  //     .filter((i) => i.id !== hoveredItemId)
+  //     .map((otherItem) => {
+  //       const [x2, y2] = otherItem.position;
+  //       return (
+  //         <line
+  //           key={`line-${hoveredItemId}-${otherItem.id}`}
+  //           x1={x1}
+  //           y1={y1}
+  //           x2={x2}
+  //           y2={y2}
+  //           stroke="rgba(0,0,0,0.2)"
+  //           strokeWidth={1}
+  //           className={styles.line}
+  //         />
+  //       );
+  //     });
+  // };
 
   return (
     <svg
@@ -193,9 +194,26 @@ const _Chart: FC<ChartProps> = ({
           ))}
         </g>
       ))}
+
+      {hoveredItemId &&
+        (() => {
+          const hoveredItem = items.find((item) => item.id === hoveredItemId);
+          if (!hoveredItem) return null;
+
+          return (
+            <ConnectingLines
+              items={[
+                hoveredItem, // Include the hovered item
+                ...items.filter((i) => hoveredItem.related?.includes(i.title)), // Include related items by title
+              ]}
+              hoveredItemId={hoveredItemId}
+              show={!!hoveredItemId}
+              className={styles.connectingLines}
+            />
+          );
+        })()}
       <g className={styles.items}>{items.map((item) => renderItem(item))}</g>
       <g className={styles.ringLabels}>{renderRingLabels()}</g>
-      {renderHoverLines()}
     </svg>
   );
 };

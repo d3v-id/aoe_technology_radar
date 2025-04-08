@@ -4,7 +4,7 @@ ring: hold
 quadrant: tools
 tags: [coding, frontend]
 icon: git
-related:
+related: [Github, Bitbucket, Azure]
 ---
 
 Git ...

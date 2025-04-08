@@ -1,0 +1,22 @@
+/* .line {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+} */
+.line.hidden {
+  opacity: 0;
+}
+
+.line {
+  stroke: rgba(6, 1, 87, 0.25); /* Line color */
+  stroke-width: 4; /* Line thickness */
+  fill: none;
+  stroke-dasharray: 6 4; /* Dotted pattern: 4px dash, 4px gap */
+  stroke-dashoffset: 100%; /* Start with the line hidden */
+  animation: drawDottedLine 50s linear infinite; /* Animate the dotted line */
+}
+
+@keyframes drawDottedLine {
+  to {
+    stroke-dashoffset: 0; /* Move the dashes along the line */
+  }
+}

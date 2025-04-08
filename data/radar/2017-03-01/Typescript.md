@@ -1,10 +1,10 @@
 ---
-title: "Typescript"
+title: "TypeScript"
 ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: typescript
-related:
+related: [JavaScript, Angular]
 ---
 
-Typescript ...
+TypeScript ...

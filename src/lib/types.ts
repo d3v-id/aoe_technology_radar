@@ -26,6 +26,7 @@ export interface Item {
   revisions?: Revision[];
   position: [x: number, y: number];
   icon?: string;
+  related?: string[];
 }
 
 export interface Ring {

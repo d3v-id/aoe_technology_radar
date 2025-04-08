@@ -19,9 +19,6 @@ export function Blip({ icon, flag, color, x, y }: BlipProps & { flag: Flag }) {
     return <BlipIcon icon={icon} x={x} y={y} color={color} />;
   }
 
-  console.log("1");
-  console.log(icon);
-
   switch (flag) {
     case Flag.New:
       return <BlipNew icon={icon} x={x} y={y} color={color} />;
@@ -92,8 +89,8 @@ function BlipIcon({ icon, x, y, color }: BlipProps) {
         />
       ) : (
         <text
-          x="25"
-          y="30"
+          x="10"
+          y="10"
           textAnchor="middle"
           fill={"black"}
           fontSize="14"

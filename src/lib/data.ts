@@ -70,6 +70,10 @@ export function getTags(): string[] {
   return data.tags;
 }
 
+// export function getRelated(): string[] {
+//   return data.item;
+// }
+
 export function getEditUrl(props: { id: string; release: string }) {
   if (!config.editUrl) return "";
   return format(config.editUrl, props);

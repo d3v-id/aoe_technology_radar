@@ -7,11 +7,3 @@
     display: none;
   }
 }
-
-.line {
-  transition: opacity 0.3s ease;
-  opacity: 1;
-}
-.line.hidden {
-  opacity: 0;
-}

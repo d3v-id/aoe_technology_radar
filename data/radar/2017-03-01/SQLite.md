@@ -4,7 +4,7 @@ ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: sqlite
-related:
+related: [SQL]
 ---
 
 SQLite ...

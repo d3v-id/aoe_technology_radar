@@ -21,6 +21,7 @@ const ringIds = rings.map((r) => r.id);
 const quadrants = config.quadrants.map((q, i) => ({ ...q, position: i + 1 }));
 const quadrantIds = quadrants.map((q) => q.id);
 const tags = (config as { tags?: string[] }).tags || [];
+
 const positioner = new Positioner(size, quadrants, rings);
 const errorHandler = new ErrorHandler(quadrants, rings);
 
@@ -97,6 +98,7 @@ async function parseDirectory(dirPath: string): Promise<Item[]> {
             revisions: [],
             position: [0, 0],
             icon: data.icon || undefined,
+            related: data.related || [],
           };
         } else {
           items[id].release = releaseDate;
@@ -106,6 +108,7 @@ async function parseDirectory(dirPath: string): Promise<Item[]> {
           items[id].ring = data.ring || items[id].ring;
           items[id].quadrant = data.quadrant || items[id].quadrant;
           items[id].tags = data.tags || items[id].tags;
+          items[id].related = data.related || items[id].related;
           items[id].featured =
             typeof data.featured === "boolean"
               ? data.featured

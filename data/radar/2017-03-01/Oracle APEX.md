@@ -1,10 +1,10 @@
 ---
-title: "SQL"
+title: "Oracle APEX"
 ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
-icon: SQL
-related: [SQLite]
+icon: OracleAPEX
+related: [SQL]
 ---
 
-SQL ...
+Oracle APEX ...

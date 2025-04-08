@@ -23,7 +23,7 @@ const ItemPage: CustomPage = () => {
   const quadrant = getQuadrant(query.quadrant as string);
   const item = getItem(query.id as string);
 
-  const relatedItems = useMemo(() => {
+  const related = useMemo(() => {
     return getItems()
       .filter((i) => i.quadrant === quadrant?.id && i.ring == item?.ring)
       .sort(sortByFeaturedAndTitle);
@@ -52,7 +52,7 @@ const ItemPage: CustomPage = () => {
             />
           </div>
 
-          <ItemList items={relatedItems} activeId={item.id} />
+          <ItemList items={related} activeId={item.id} />
         </aside>
       </div>
     </>

@@ -4,7 +4,7 @@ ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: angular
-related:
+related: [TypeScript]
 ---
 
 Angular ...

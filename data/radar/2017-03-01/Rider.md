@@ -4,7 +4,7 @@ ring: hold
 quadrant: tools
 tags: [coding, frontend]
 icon: rider
-related:
+related: [Eclipse]
 ---
 
 Rider ...

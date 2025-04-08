@@ -1,10 +1,10 @@
 ---
-title: "C#"
+title: "Hangfire"
 ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, backend]
-icon: cSharp
-related: [CSharp, Blazor]
+icon: hangfire
+related: [cSharp]
 ---
 
-C# ...
+Hangfire ...

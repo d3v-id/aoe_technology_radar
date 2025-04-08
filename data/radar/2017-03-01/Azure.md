@@ -1,10 +1,10 @@
 ---
 title: "Azure"
 ring: hold
-quadrant: tools
+quadrant: platforms-and-operations
 tags: [coding, frontend]
 icon: Azure
-related:
+related: [Git]
 ---
 
 Azure ...

@@ -2,7 +2,7 @@
 title: "Rider"
 ring: hold
 quadrant: tools
-tags: [coding, frontend]
+tags: [coding]
 icon: rider
 related: [Eclipse]
 ---

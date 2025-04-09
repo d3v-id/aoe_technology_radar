@@ -1,10 +1,10 @@
 ---
-title: "SQL"
+title: "PL/SQL"
 ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, backend]
-icon: SQL
-related: [SQLite]
+icon: PL/SQL
+related: [SQL, OracleAPEX]
 ---
 
-SQL ...
+PL/SQL ...

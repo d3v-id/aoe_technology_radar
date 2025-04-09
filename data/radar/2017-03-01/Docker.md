@@ -4,7 +4,7 @@ ring: hold
 quadrant: platforms-and-operations
 tags: [coding, frontend]
 icon: docker
-related:
+related: [podman]
 ---
 
 Docker ...

@@ -4,7 +4,7 @@ ring: hold
 quadrant: tools
 tags: [coding]
 icon: Visual Studio Code
-related: []
+related: [VisualStudio]
 ---
 
 Visual Studio Code ...

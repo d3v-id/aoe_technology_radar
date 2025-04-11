@@ -2,7 +2,7 @@
 title: "RabbitMQ"
 ring: hold
 quadrant: tools
-tags: [coding, frontend]
+tags: [backend]
 icon: rabbitMQ
 related:
 ---

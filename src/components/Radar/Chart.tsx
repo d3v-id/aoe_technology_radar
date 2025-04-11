@@ -190,6 +190,7 @@ const _Chart: FC<ChartProps> = ({
               fill="none"
               stroke={quadrant.color}
               strokeWidth={ring.strokeWidth || 2}
+              stroke-dasharray="16,6"
             />
           ))}
         </g>

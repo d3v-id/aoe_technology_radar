@@ -39,7 +39,7 @@
       "id": "platforms-and-operations",
       "title": "Plattformen & Betrieb",
       "description": "Technologien und Werkzeuge für den Betrieb von Software und Infrastruktur, einschließlich Plattformen und Dienste zur Verwaltung und Skalierung von Anwendungen.",
-      "color": "#3F63FF"
+      "color": "#5978FB"
     },
     {
       "id": "tools",
@@ -55,15 +55,15 @@
       "description": "",
       "color": "#588157",
       "radius": 0.5,
-      "strokeWidth": 3
+      "strokeWidth": 2
     },
     {
       "id": "trial",
       "title": "> 3 Jahre",
       "description": "",
       "color": "#457b9d",
-      "radius": 0.69,
-      "strokeWidth": 1.5
+      "radius": 0.7,
+      "strokeWidth": 1.25
     },
     {
       "id": "hold",
@@ -71,7 +71,7 @@
       "description": "Test",
       "color": "#d62828",
       "radius": 1,
-      "strokeWidth": 0.75
+      "strokeWidth": 0.7
     }
   ],
   "flags": {

@@ -14,7 +14,7 @@
   margin: 0 0 30px;
 }
 
-.imprint {
+/* .imprint {
   opacity: 0.7;
   display: block;
   font-size: 12px;
@@ -24,7 +24,7 @@
   &:hover {
     opacity: 1;
   }
-}
+} */
 
 @media (min-width: 768px) {
   .branding {
@@ -41,9 +41,9 @@
     margin: 0 50px 0;
   }
 
-  .imprint {
+  /* .imprint {
     text-align: right;
-  }
+  } */
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

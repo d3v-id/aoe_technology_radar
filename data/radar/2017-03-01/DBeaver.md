@@ -1,6 +1,6 @@
 ---
 title: "DBeaver"
-ring: hold
+ring: trial
 quadrant: tools
 tags: []
 icon: DBeaver

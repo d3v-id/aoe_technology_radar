@@ -1,6 +1,6 @@
 ---
 title: "Java"
-ring: trial
+ring: adopt
 quadrant: languages-and-frameworks
 tags: [coding, backend]
 icon: java

@@ -1,6 +1,6 @@
 ---
 title: "C#"
-ring: hold
+ring: adopt
 quadrant: languages-and-frameworks
 tags: [coding, backend]
 icon: cSharp

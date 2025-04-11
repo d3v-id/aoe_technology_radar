@@ -101,7 +101,7 @@
   },
   "chart": {
     "size": 800,
-    "blipSize": 30
+    "blipSize": 25
   },
   "social": [
     {
@@ -113,10 +113,8 @@
       "icon": "xing"
     }
   ],
-  "imprint": "https://www.aoe.com/en/imprint.html",
   "labels": {
     "title": "Technology Radar",
-    "imprint": "Legal Information",
     "quadrant": "Quadrant",
     "quadrantOverview": "Quadrant Overview",
     "zoomIn": "Zoom in",

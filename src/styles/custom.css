@@ -1,2 +1,70 @@
 /* Use this file to optionally override global css styles and use with caution. */
 /* See README.md for hints and examples: https://github.com/AOEpeople/aoe_technology_radar/ */
+
+
+/* General container for centering the skills card */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Card styling */
+  .skills-card {
+    background-color: #1a1a1a; /* dark gray */
+    color: white;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  
+  /* Title styling */
+  .skills-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Add any additional customization here */
+  
+
+
+  
+
+  .skill-dots-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .skill-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .dots-container {
+    display: flex;
+    gap: 4px;
+    align-items: center; /* Center dots vertically */
+  }
+  
+  .dot {
+    width: 12px;  /* Increased size to make the dots more visible */
+    height: 12px;
+    border-radius: 50%;
+    background-color: lightgray; /* Default empty dot color */
+  }
+  
+  .filled {
+    background-color: blue; /* Color for filled dots */
+  }
+  
+  .empty {
+    background-color: lightgray; /* Color for empty dots */
+  }
+  

@@ -2,28 +2,29 @@ import React from "react";
 
 type SkillDotsProps = {
   name: string;
-  level: number; // z. B. 0 bis 5
-  max?: number; // Standard: 5 Punkte
-  color?: string; // z. B. "bg-indigo-500"
+  level: number; // from 0 to 5
+  max?: number; // Default: 5 dots
+  color?: string; // Default: "blue"
 };
 
 const SkillDots: React.FC<SkillDotsProps> = ({
   name,
   level,
   max = 5,
-  color = "bg-indigo-500",
+  color = "blue",
 }) => {
   const dots = Array.from({ length: max }, (_, i) => (
     <div
       key={i}
-      className={`w-4 h-4 rounded-full ${i < level ? color : `border ${color.replace("bg-", "border-")}`}`}
+      className={`dot ${i < level ? "filled" : "empty"}`}
+      style={{ backgroundColor: i < level ? color : undefined }}
     />
   ));
 
   return (
-    <div className="mb-4">
-      <div className="text-sm font-medium mb-1">{name}</div>
-      <div className="flex gap-2">{dots}</div>
+    <div className="skill-dots-container">
+      <div className="skill-name">{name}</div>
+      <div className="dots-container">{dots}</div>
     </div>
   );
 };

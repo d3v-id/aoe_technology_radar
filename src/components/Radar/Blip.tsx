@@ -75,25 +75,38 @@ function BlipIcon({ icon, x, y, color }: BlipProps) {
   const [imageError, setImageError] = reactUseState(false);
   const iconSrc = `/blipIconsColor/${icon}.svg`;
 
-  x = Math.round(x - halfBlipSize);
-  y = Math.round(y - halfBlipSize);
+  x = Math.round(x);
+  y = Math.round(y);
 
   return (
     <g transform={`translate(${x},${y})`}>
+      {/* Background circle */}
+      <circle
+        cx="0"
+        cy="0"
+        r={(blipSize * 3) / 4}
+        fill="white"
+        stroke="white"
+        strokeWidth="1"
+      />
+
+      {/* Icon image */}
       {!imageError ? (
         <image
           href={iconSrc}
           width={blipSize}
           height={blipSize}
+          x={-halfBlipSize}
+          y={-halfBlipSize}
           onError={() => setImageError(true)}
         />
       ) : (
         <text
-          x="10"
-          y="10"
+          x="0"
+          y="5"
           textAnchor="middle"
-          fill={"black"}
-          fontSize="14"
+          fill="black"
+          fontSize="12"
           fontWeight="bold"
           fontFamily="Arial"
         >

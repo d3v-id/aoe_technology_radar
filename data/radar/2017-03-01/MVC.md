@@ -1,6 +1,6 @@
 ---
 title: "Model View Controller (MVC)"
-ring: hold
+ring: adopt
 quadrant: methods-and-patterns
 tags: [coding, frontend]
 icon: MVC

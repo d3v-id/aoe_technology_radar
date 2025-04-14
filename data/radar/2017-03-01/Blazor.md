@@ -2,7 +2,7 @@
 title: "Blazor"
 ring: hold
 quadrant: languages-and-frameworks
-tags: [coding, backend]
+tags: [coding, frontend]
 icon: Blazor
 related: [CSharp]
 ---

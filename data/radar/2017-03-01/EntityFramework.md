@@ -1,6 +1,6 @@
 ---
 title: "Entity Framework"
-ring: hold
+ring: trial
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: EF

@@ -39,7 +39,7 @@
       "id": "platforms-and-operations",
       "title": "Plattformen & Betrieb",
       "description": "Technologien und Werkzeuge für den Betrieb von Software und Infrastruktur, einschließlich Plattformen und Dienste zur Verwaltung und Skalierung von Anwendungen.",
-      "color": "#3F63FF"
+      "color": "#5978FB"
     },
     {
       "id": "tools",
@@ -51,35 +51,27 @@
   "rings": [
     {
       "id": "adopt",
-      "title": "Adopt",
+      "title": "> 5 Jahre",
       "description": "",
       "color": "#588157",
       "radius": 0.5,
-      "strokeWidth": 5
-    },
-    {
-      "id": "trial",
-      "title": "Trial",
-      "description": "",
-      "color": "#457b9d",
-      "radius": 0.69,
-      "strokeWidth": 3
-    },
-    {
-      "id": "assess",
-      "title": "Assess",
-      "description": "",
-      "color": "#bc6c25",
-      "radius": 0.85,
       "strokeWidth": 2
     },
     {
-      "id": "hold",
-      "title": "Hold",
+      "id": "trial",
+      "title": "> 3 Jahre",
       "description": "",
+      "color": "#457b9d",
+      "radius": 0.7,
+      "strokeWidth": 1.25
+    },
+    {
+      "id": "hold",
+      "title": "> 1 Jahr",
+      "description": "Test",
       "color": "#d62828",
       "radius": 1,
-      "strokeWidth": 0.75
+      "strokeWidth": 0.7
     }
   ],
   "flags": {
@@ -101,12 +93,10 @@
   },
   "labels": {
     "title": "Technologie-Radar",
-    "imprint": "Rechtliche Informationen",
     "quadrant": "Quadrant",
     "quadrantOverview": "Quadranten-Übersicht",
     "zoomIn": "Hineinzoomen",
     "filterByTag": "Nach Tag filtern",
-    "footer": "Der Technologie-Radar ist ein Projekt der AOE GmbH. Sie können Ihren eigenen Radar basierend auf dem Open-Source-Projekt erstellen.",
     "notUpdated": "Dieses Element wurde in den letzten drei Versionen des Radars nicht aktualisiert. Sollte es in einer der neueren Ausgaben enthalten sein, bleibt es wahrscheinlich relevant. Falls das Element jedoch älter ist, könnte seine Relevanz abgenommen haben, und unsere aktuelle Bewertung könnte davon abweichen. Leider sind unsere Kapazitäten zur regelmäßigen Überprüfung früherer Radar-Elemente begrenzt.",
     "notFound": "404 - Seite nicht gefunden",
     "pageAbout": "Wie nutzt man den AOE Technologie-Radar?",

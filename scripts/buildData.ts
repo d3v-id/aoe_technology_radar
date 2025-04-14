@@ -215,7 +215,13 @@ function postProcessItems(items: Item[]): {
   const processedItems = filteredItems.map((item) => {
     const processedItem = {
       ...item,
-      position: positioner.getNextPosition(item.quadrant, item.ring),
+      position: positioner.getNextPosition(
+        item.quadrant,
+        item.ring,
+        filteredItems
+          .filter((i) => i.ring === item.ring)
+          .filter((i) => i.quadrant === item.quadrant).length,
+      ),
       flag: getFlag(item, releases),
       // only keep revision which ring or body is different
       revisions: item.revisions

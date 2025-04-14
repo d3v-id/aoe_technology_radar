@@ -1,10 +1,10 @@
 ---
-title: "C++"
+title: "Trello"
 ring: hold
 quadrant: languages-and-frameworks
-tags: [coding]
-icon: CPlusPlus
+tags: []
+icon: Trello
 related: []
 ---
 
-C++ ...
+Trello ...

@@ -94,9 +94,9 @@ export function getItems(quadrant?: string, featured?: boolean): Item[] {
   }) as Item[];
 }
 
-export function getImprintUrl() {
-  return config.imprint;
-}
+// export function getImprintUrl() {
+//   return config.imprint;
+// }
 
 export function getAbsoluteUrl(path: string = "/") {
   return `${config.baseUrl}${path}`;

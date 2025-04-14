@@ -1,6 +1,6 @@
 ---
 title: "Git"
-ring: hold
+ring: trial
 quadrant: tools
 tags: [coding, frontend]
 icon: git

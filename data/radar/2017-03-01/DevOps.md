@@ -1,9 +1,9 @@
 ---
 title: "DevOps"
-ring: hold
+ring: trial
 quadrant: tools
 tags: []
-icon: devops
+icon: DevOps
 related: [Azure]
 ---
 

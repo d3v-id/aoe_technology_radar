@@ -3,7 +3,7 @@ title: "Visual Studio"
 ring: hold
 quadrant: tools
 tags: [coding]
-icon: VisualStudio
+icon: Visual-Studio
 related: [Visual Studio Code]
 ---
 

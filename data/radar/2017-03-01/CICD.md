@@ -1,10 +1,10 @@
 ---
-title: "CICD"
+title: "CI/CD"
 ring: hold
 quadrant: tools
 tags: []
-icon: CICD
+icon: CI/CD
 related: [DevOps]
 ---
 
-CICD ...
+CI/CD ...

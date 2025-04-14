@@ -1,6 +1,6 @@
 ---
 title: "Hibernate"
-ring: adopt
+ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, backend]
 icon: hibernate

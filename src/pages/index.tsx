@@ -43,9 +43,9 @@ const Home: CustomPage = () => {
 
       <h1>
         {appName}{" "}
-        <span style={{ color: "var(--highlight)", whiteSpace: "nowrap" }}>
+        {/* <span style={{ color: "var(--highlight)", whiteSpace: "nowrap" }}>
           Version #{version}
-        </span>
+        </span> */}
       </h1>
       {sections.map((section) => {
         switch (section) {

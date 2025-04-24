@@ -2,7 +2,7 @@
 title: "Azure DevOps"
 ring: hold
 quadrant: tools
-tags: [coding, frontend]
+tags: [coding]
 icon: Azure-Devops
 related: [Azure, DevOps]
 ---

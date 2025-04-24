@@ -4,7 +4,7 @@ ring: hold
 quadrant: languages-and-frameworks
 tags: [coding, frontend]
 icon: Blazor
-related: [CSharp]
+related: [CSharp, DotNetCore]
 ---
 
 Blazor ...

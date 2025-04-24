@@ -2,9 +2,9 @@
 title: "Azure"
 ring: hold
 quadrant: platforms-and-operations
-tags: [coding, frontend]
+tags: [coding]
 icon: Azure
-related: [Git]
+related: [Git, Azure-DevOps]
 ---
 
 Azure ...

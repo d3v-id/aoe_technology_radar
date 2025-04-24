@@ -2,7 +2,7 @@
 title: "Bitbucket"
 ring: hold
 quadrant: tools
-tags: [frontend]
+tags: []
 icon: Bitbucket
 related: [Git, Azure]
 ---

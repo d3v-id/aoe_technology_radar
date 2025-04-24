@@ -2,7 +2,7 @@
 title: "Git"
 ring: trial
 quadrant: tools
-tags: [coding, frontend]
+tags: [coding]
 icon: git
 related: [Github, Bitbucket, Azure]
 ---

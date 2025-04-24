@@ -72,15 +72,28 @@ export function Blip({ icon, flag, color, x, y }: BlipProps & { flag: Flag }) {
 }*/
 
 function BlipIcon({ icon, x, y, color }: BlipProps) {
-  const [imageError, setImageError] = reactUseState(false);
-  const iconSrc = `/blipIconsColor/${icon}.svg`;
+  const [svgError, setSvgError] = reactUseState(false);
+  const [jpgError, setJpgError] = reactUseState(false);
 
   x = Math.round(x);
   y = Math.round(y);
 
+  const iconSrc = !svgError
+    ? `/blipIconsColor/${icon}.svg`
+    : !jpgError
+      ? `/blipIconsColor/${icon}.jpg`
+      : null;
+
+  const handleImageError = (type: "svg" | "jpg") => {
+    if (type === "svg" && !svgError) {
+      setSvgError(true);
+    } else if (type === "jpg" && !jpgError) {
+      setJpgError(true);
+    }
+  };
+
   return (
     <g transform={`translate(${x},${y})`}>
-      {/* Background circle */}
       <circle
         cx="0"
         cy="0"
@@ -89,16 +102,21 @@ function BlipIcon({ icon, x, y, color }: BlipProps) {
         stroke="white"
         strokeWidth="1"
       />
-
-      {/* Icon image */}
-      {!imageError ? (
+      {iconSrc ? (
         <image
+          key={iconSrc}
           href={iconSrc}
           width={blipSize}
           height={blipSize}
           x={-halfBlipSize}
           y={-halfBlipSize}
-          onError={() => setImageError(true)}
+          onError={() => {
+            if (!svgError) {
+              handleImageError("svg");
+            } else if (!jpgError) {
+              handleImageError("jpg");
+            }
+          }}
         />
       ) : (
         <text

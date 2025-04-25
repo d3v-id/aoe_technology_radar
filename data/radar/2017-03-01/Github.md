@@ -2,7 +2,7 @@
 title: "Github"
 ring: adopt
 quadrant: tools
-tags: [coding, frontend]
+tags: []
 icon: github
 related: [Git]
 ---

@@ -2,7 +2,7 @@
 title: "Domain-Driven Design (DDD)"
 ring: hold
 quadrant: methods-and-patterns
-tags: [coding, frontend]
+tags: []
 icon: DDD
 related:
 ---

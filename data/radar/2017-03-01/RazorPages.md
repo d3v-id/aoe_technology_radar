@@ -4,7 +4,7 @@ ring: hold
 quadrant: tools
 tags: [coding, frontend]
 icon: Razor
-related: [CSharp]
+related: [CSharp, DotNetCore]
 ---
 
 Razor Pages ...

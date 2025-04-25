@@ -2,9 +2,9 @@
 title: "Entity Framework"
 ring: trial
 quadrant: languages-and-frameworks
-tags: [coding, frontend]
+tags: [coding]
 icon: EF
-related: [cSharp, DotNetCore]
+related: [cSharp, .Net Core]
 ---
 
 Entity Framework ...

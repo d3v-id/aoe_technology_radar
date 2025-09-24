@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+import GooeyNav from "@/components/GooeyNav";
 import { QuadrantList } from "@/components/QuadrantList/QuadrantList";
 import { Radar } from "@/components/Radar/Radar";
+import SplitText from "@/components/SplitText";
 import { Tags } from "@/components/Tags/Tags";
 import {
   getAppName,
@@ -32,6 +34,13 @@ const Home: CustomPage = () => {
   const items = getItems(undefined, true).filter(
     (item) => !tag || item.tags?.includes(tag),
   );
+  const items2 = [
+    { label: "Home", href: "#" },
+
+    { label: "About", href: "#" },
+
+    { label: "Contact", href: "#" },
+  ];
 
   return (
     <>
@@ -46,7 +55,21 @@ const Home: CustomPage = () => {
         {/* <span style={{ color: "var(--highlight)", whiteSpace: "nowrap" }}>
           Version #{version}
         </span> */}
+        <SplitText text="Hello World" className="text-3xl font-bold" />
       </h1>
+      <div style={{ height: "600px", position: "relative" }}>
+        <GooeyNav
+          items={items2}
+          particleCount={15}
+          particleDistances={[90, 10]}
+          particleR={100}
+          initialActiveIndex={0}
+          animationTime={600}
+          timeVariance={300}
+          colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+        />
+      </div>
+
       {sections.map((section) => {
         switch (section) {
           case "radar":

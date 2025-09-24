@@ -3,7 +3,7 @@ import config from "./config";
 
 import { format } from "@/lib/format";
 import { Flag, Item, Quadrant, Ring } from "@/lib/types";
-import { assetUrl } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export function getLabel(key: keyof typeof config.labels) {
   return config.labels[key] || "";
@@ -22,12 +22,12 @@ export function getAppName() {
 }
 
 export function getLogoUrl() {
-  return assetUrl(config.logoFile);
+  return cn(config.logoFile);
 }
 
 export function getJsUrl(): string {
   if (!config.jsFile) return "";
-  return assetUrl(config.jsFile);
+  return cn(config.jsFile);
 }
 
 export function getChartConfig() {

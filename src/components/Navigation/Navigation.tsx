@@ -5,6 +5,7 @@ import styles from "./Navigation.module.css";
 import IconOverview from "@/components/Icons/Overview";
 import IconQuestion from "@/components/Icons/Question";
 import IconSearch from "@/components/Icons/Search";
+import SplitText from "@/components/SplitText";
 import { getLabel, getToggle } from "@/lib/data";
 
 export function Navigation() {
@@ -20,6 +21,7 @@ export function Navigation() {
         <li className={styles.item}>
           <Link href="/overview">
             <IconOverview className={styles.icon} />
+
             <span className={styles.label}>{getLabel("pageOverview")}</span>
           </Link>
         </li>

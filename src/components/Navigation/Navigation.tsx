@@ -11,12 +11,12 @@ export function Navigation() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        <li className={styles.item}>
+        {/* <li className={styles.item}>
           <Link href="/help-and-about-tech-radar">
             <IconQuestion className={styles.icon} />
             <span className={styles.label}>{getLabel("pageAbout")}</span>
           </Link>
-        </li>
+        </li> */}
         <li className={styles.item}>
           <Link href="/overview">
             <IconOverview className={styles.icon} />

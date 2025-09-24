@@ -97,7 +97,7 @@ export const Radar: FC<RadarProps> = ({
           <Label key={quadrant.id} quadrant={quadrant} />
         ))}
       </div>
-      <Legend />
+      {/* <Legend /> */}
       <span
         className={cn(styles.tooltip, tooltip.show && styles.isShown)}
         style={tooltipStyle}
